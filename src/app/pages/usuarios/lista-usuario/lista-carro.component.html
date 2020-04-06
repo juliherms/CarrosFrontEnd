@@ -31,9 +31,6 @@
                 <div class="box-footer clearfix">
                     <ul class="pagination pagination-sm no-margin pull-right">
                       <li><a href="" >&laquo;</a></li>
-                      <li *ngFor="let p of pages; let i=index">
-                          <a [ngClass]="{'pagination-focus':i==page}"  href="">{{i+1}}</a>
-                      </li>
                       <li><a href="" >&raquo;</a></li>
                     </ul>
                 </div>
