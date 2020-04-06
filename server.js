@@ -5,11 +5,11 @@ const path = require('path');
 const app = express();
 
 // Serve only the static files form the dist directory
-app.use(express.static(__dirname + '/dist/doemaispanel'));
+app.use(express.static(__dirname + '/dist/carrospanel'));
 
 app.get('/*', function(req,res) {
     
-res.sendFile(path.join(__dirname+'/dist/doemaispanel/index.html'));
+res.sendFile(path.join(__dirname+'/dist/carrospanel/index.html'));
 });
 
 // Mudar porta em dev
