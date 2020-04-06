@@ -1,0 +1,88 @@
+<div class="box box-default">
+    <!-- cabecalho -->
+    <div class="box-header with-border">
+      <h3 class="box-title">Manutenção de Carros</h3>
+      <div class="box-tools pull-right">
+            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-remove"></i></button>
+      </div>
+    </div>
+    <!--Formulario -->
+    <form class="form-horizontal" #form="ngForm" (ngSubmit)="register()">
+        <!-- caixa de mensagem -->
+        <div [ngClass]="classCss" role="alert" *ngIf="message">
+          <strong>{{ message.text }}</strong>
+        </div>
+        <div class="box-body">
+          <div>
+            <label for="year" class="col-sm-2 control-label">Ano</label>
+              <div class="col-sm-10">
+
+                <input
+                type="text" 
+                id="year" 
+                class="form-control"
+                name="year"
+                [(ngModel)] = "carro.year"
+                #year="ngModel"
+                placeholder="Ano">
+
+            </div>
+          </div>
+
+          <div>
+            <label for="licensePlate" class="col-sm-2 control-label">Placa</label>
+              <div class="col-sm-10">
+
+                <input
+                type="text" 
+                id="licensePlate" 
+                class="form-control"
+                name="licensePlate"
+                [(ngModel)] = "carro.licensePlate"
+                #licensePlate="ngModel"
+                placeholder="Placa">
+
+            </div>
+          </div>
+
+          <div>
+            <label for="model" class="col-sm-2 control-label">Modelo</label>
+              <div class="col-sm-10">
+
+                <input
+                type="text" 
+                id="model" 
+                class="form-control"
+                name="model"
+                [(ngModel)] = "carro.model"
+                #model="ngModel"
+                placeholder="Modelo">
+
+            </div>
+          </div>
+
+          <div>
+            <label for="color" class="col-sm-2 control-label">Cor</label>
+              <div class="col-sm-10">
+
+                <input
+                type="text" 
+                id="color" 
+                class="form-control"
+                name="model"
+                [(ngModel)] = "carro.color"
+                #color="ngModel"
+                placeholder="Cor">
+
+            </div>
+          </div>
+            
+            
+        </div>
+        <div class="box-footer">
+            <button type="submit" [disabled]="!form.valid" class="btn btn-info pull-right">Salvar</button>
+        </div>
+    </form>
+</div>
+

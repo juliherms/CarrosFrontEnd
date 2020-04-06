@@ -1,0 +1,19 @@
+<aside class="main-sidebar">
+    <section class="sidebar">
+      <!-- usuario -->
+      <ul class="sidebar-menu" data-widget="tree">
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-edit"></i> <span>Meus Carros</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a [routerLink]="['/carro-novo']"><i class="fa fa-circle-o"></i> Novo Carro</a></li>
+            <li><a [routerLink]="['/carro-lista']"><i class="fa fa-circle-o"></i> Listar Carros</a></li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+  </aside>

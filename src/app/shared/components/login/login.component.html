@@ -1,0 +1,44 @@
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+      
+    </div>
+
+    <!-- Login Form -->
+    <form #form="ngForm" (ngSubmit)="login()">
+      <!-- mensagem de erro -->
+      <div class="alert alert-error" role="alert" *ngIf="message">
+        <strong>Login inválido</strong>
+      </div>
+
+      <input
+         type="text" 
+         id="login" 
+         class="fadeIn second"
+         name="login"
+         [(ngModel)] = "usuario.login"
+         #email="ngModel"
+         placeholder="Login">
+
+      <input 
+        type="password"
+        [(ngModel)] = "usuario.password"
+        id="password"
+        #password="ngModel"
+        class="fadeIn third"
+        name="senha" 
+        placeholder="Senha"
+        >
+      <input type="submit" [disabled]="!form.valid" class="fadeIn fourth" value="Entrar">
+    </form>
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+      <a class="underlineHover" href="#">Esqueceu sua senha?</a>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,26 @@
+<div class="box box-default">
+
+  <!--Formulario -->
+  <form class="form-horizontal" [formGroup]="resourceForm" (submit)="submitForm()">
+      <div class="box-body">
+          <!-- nome -->
+          <div>
+              <label for="nome" class="col-sm-2 control-label">Nome</label>
+              <div class="col-sm-10">
+                  <input type="text" class="form-control" id="nome" formControlName="nome">
+              </div> 
+          </div>
+          <!-- descricao -->
+          <div>
+              <label for="descricao" class="col-sm-2 control-label">Descrição</label>
+              <div class="col-sm-10">
+                  <input type="text" class="form-control" id="descricao" formControlName="descricao">
+              </div> 
+          </div>
+      </div>
+      <!-- botao -->
+      <button [disabled]="submittingForm || resourceForm.invalid" type="submit" class="btn btn-primary btn-lg float-right mt-3">
+        Salvar
+      </button>
+  </form>
+</div>

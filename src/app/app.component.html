@@ -1,0 +1,20 @@
+<!--header da pagina -->
+<app-header [hidden] = "!exibirTemplate"></app-header>
+
+<!-- menu da pagina -->
+<app-menu [hidden] = "!exibirTemplate"></app-menu>
+
+<!-- Content Wrapper. Contains page content -->
+<div [ngClass]="showContentWrapper()">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    
+  </section>
+   <!-- Main content -->
+   <section class="content">
+     <!-- renderiza o conteudo das rotas aqui -->
+     <router-outlet></router-outlet>
+  </section>
+</div>
+<!-- rodape da pagina -->
+<app-footer [hidden] = "!exibirTemplate" ></app-footer>
