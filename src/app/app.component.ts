@@ -12,7 +12,7 @@ export class AppComponent implements OnInit {
 
   exibirTemplate : boolean = false; //controla a exibição do menu
 
-  title = 'doemaispanel';
+  title = 'carrospanel';
 
   constructor(){
     this.shared = SharedService.getInstance();
